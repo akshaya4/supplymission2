@@ -34,19 +34,21 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:1, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 100 , 5 , {restitution:1, isStatic:true});
 	World.add(world, packageBody);
 	
        
+	
+
+	//Create a Ground
+	ground = Bodies.rectangle(width/2, 750, width, 10 , {isStatic:true} );
+	 World.add(world, ground);
+	 
+	
 	box2 = new Box(400,650,180,20) 
 	box1 = new Box(320,600,20,100)
 	box3 = new Box(480,595,20,90)
 
-	//Create a Ground
-	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
-	 World.add(world, ground);
-	 
-	
 	
 
 	Engine.run(engine);
