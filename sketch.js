@@ -38,6 +38,10 @@ function setup() {
 	World.add(world, packageBody);
 	
        
+	box2 = new Box(400,650,180,20) 
+	box1 = new Box(320,600,20,100)
+	box3 = new Box(480,595,20,90)
+
 	
 
 	//Create a Ground
@@ -45,10 +49,6 @@ function setup() {
 	 World.add(world, ground);
 	 
 	
-	box2 = new Box(400,650,180,20) 
-	box1 = new Box(320,600,20,100)
-	box3 = new Box(480,595,20,90)
-
 	
 
 	Engine.run(engine);
